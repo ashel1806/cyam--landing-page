@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="servicios.css">
+    <link rel="stylesheet" href="../packages/swiper.bundle.min.css">
+    <title>Servicios</title>
+
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+</head>
+<body>
+        <header>
+            <div class="container">
+                <div class="menu-container">
+                    <h1 class="menu">Menú</h1>
+                    <!-- <a href="index.html"><img src="LOGO.png" alt=""></a> -->
+                </div>
+                <nav id="site-nav" class="site-nav"> 
+                    <ul>
+                        <li><a href="../home/index.html"><i class="fas fa-home"></i>Inicio</a></li>
+                        <li><a href="../about-us/nosotros.html"><i class="fas fa-address-book"></i>Nosotros</a></li>
+                        <li><a href="#"><i class="fas fa-pencil-ruler"></i>Servicios</a></li>
+                        <li><a href="../contact/contacto.html" class="contacto"><i class="fas fa-address-card"></i>Contacto</a></li>
+                    </ul>
+                </nav>
+    
+                <div id="menu-toogle" class="menu-toogle" onclick="cambiarClase()">
+                    <div class="hamburger"></div>
+                </div>
+            </div>
+    </header>
+
+    <div class="slider-wrap">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="slide-right">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"><i class="fas fa-caret-right"></i></i></div>
+                        <!-- <h6 class="element">01</h6> -->
+                        <h1 class="element">Polos con diseño Tie Dye</h1>
+                        <p class="element">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum temporibus, eligendi recusandae tempora cumque labore libero ea adipisci autem consequatur!
+                        </p>
+                        <a href="#" class="element">Read more</a>
+                    </div>
+                    <div class="slide-left">
+                        <img src="../assets/prueba2.png" alt="prueba2">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-right">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"><i class="fas fa-caret-right"></i></div>
+                        <!-- <h6 class="element">02</h6> -->
+                        <h1 class="element">Teñidos Personalizados</h1>
+                        <p class="element">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum temporibus, eligendi recusandae tempora cumque labore libero ea adipisci autem consequatur!
+                        </p>
+                        <a href="#" class="element">Read more</a>
+                    </div>
+                    <div class="slide-left">
+                        <img src="../assets/prueba1.png" alt="prueba2">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-right">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"><i class="fas fa-caret-right"></i></div>
+                        <!-- <h6 class="element">03</h6> -->
+                        <h1 class="element">Atención Personalizada</h1>
+                        <p class="element">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum temporibus, eligendi recusandae tempora cumque labore libero ea adipisci autem consequatur!
+                        </p>
+                        <a href="#" class="element">Read more</a>
+                    </div>
+                    <div class="slide-left">
+                        <img src="../assets/prueba.png" alt="prueba2">
+                    </div>
+                </div>
+            </div>
+
+            <!-- If we need pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <!-- If we need navigation buttons -->
+            <!-- <!-- <div class="swiper-button-prev"><img src="../assets/arrow-left.png" alt=""></div> -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/396a7376e5.js" crossorigin="anonymous"></script>
+    <script src="servicios.js"></script>
+</body>
+</html>

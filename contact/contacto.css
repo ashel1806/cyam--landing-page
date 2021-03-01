@@ -6,8 +6,22 @@
 
 body{
     font-family: 'Raleway', sans-serif;
-    background-color: #B06161;
-    height: 100vh;
+    background-image: url(../assets/bg-1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 header{
@@ -19,33 +33,28 @@ header{
     height: 60px;
 }
 
-/* por siaca noma owo*/
-/* 
-header::after{
-    content: "";
-    clear: both;
-    display: block;
-} */
-
 .container{
     width: 100%;
     height: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: .28em 1.5em;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .menu-container h1{
     font-size: 30px;
     float: left;
     width: 110px;
+    margin-top: 5px;
 }
 
 .site-nav{
     top: 100%;
     right: 0;
     position: absolute;
-    background-color:#D17979;
+    background-color:#696969;
+    z-index: 1000;
     clip-path: circle(0px at top right);
     transition: clip-path ease-in-out 700ms;
 }
@@ -78,7 +87,7 @@ header::after{
 }
 
 .site-nav a:hover, .site-nav a:focus{
-    background-color: #b14a4a;
+    background-color: #000000;
 }
 
 [class^="fas fa"]{
@@ -135,11 +144,14 @@ header::after{
     padding: 30px 50px;
     color: #fff;
     line-height: 35px;
+    position: relative;
+    border-radius: 1.5em
 }
 
 .form-container label{
     display: block;
 }
+
 .form-container h2{ 
     margin-bottom: 10px;
     font-size: 30px;
@@ -149,22 +161,25 @@ header::after{
     color: #fff;
     border-radius: 50px;
     border: 0; 
-    font-size: 16px;
-    padding: 10px 10px;
+    font-size: 1em;
+    padding: 0.7em 0.7em;
     width: 100%;
     background-color: rgba(196, 196, 196, .25);
 }
 
 textarea{
     border-radius: 20px;
-    overflow: scroll;
     resize: none;
     height: 100px;
+    font-size: 1.2em;
+    line-height: 25px;
 }
 
 .form-container input:last-child{
-    width: 30%;
+    width: 120px;
     background-image: linear-gradient(90deg, #614385, #516395);
+    cursor: pointer;
+    padding: 0.5em 1em;
 }
 
 .form-container input:last-child:hover{
@@ -176,7 +191,7 @@ textarea{
     display: flex;
     position: relative;
     width: 100%;
-    height: 40%;
+    height: auto;
     justify-content: center;
 }
 
@@ -190,7 +205,11 @@ textarea{
 .ilustrations-container > .wave{
     position: absolute;
     width: 100%;
-    top:50%;
+    bottom: 0;
+}
+
+.ilustrations-container .wave1{
+    display: none;
 }
 
 @media (min-width:600px){
@@ -199,6 +218,7 @@ textarea{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 20px;
+        grid-row-gap: 5px;
     }
 
     .apellidos{
@@ -217,23 +237,33 @@ textarea{
     #mensaje{
         grid-column: 1/-1;
         height: 150px;
+        margin-bottom: 1.2em;
     }
 
-    .ilustrations-container .wave{
-        top: 55%;
+    .ilustrations-container > .wave{
+        bottom: 0;
     }
 }
 
 
 
 @media (min-width: 800px){
-    .menu-toogle{
-        display: none;
+    header{
+        display: flex;
+        justify-content: center;
+        height: 70px;
+        background-color: rgba(0,0,0,0);
     }
 
     .container{
         padding: 0 1em;
-        /* display: none; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-toogle{
+        display: none;
     }
 
     .menu-container h1{
@@ -246,9 +276,8 @@ textarea{
         position: relative;
         background: transparent;
         float: right;
-        /* margin: 1.20em 0; */
         clip-path: initial;
-        font-size: 20px;
+        font-size: 1.1em;
     }
 
     .site-nav li{
@@ -257,46 +286,104 @@ textarea{
     }
 
     .site-nav a{
-        padding: 0;
-        margin-left: 2em;
+        padding: 0.5em 1em 0.3em;
+        margin-right: 1.5em;
+        border: 2px solid #fff;
+        position: relative;
+    }
+
+    .site-nav a::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: rgba(255, 255, 255, 0.3);
+        transition: all .5s ease;
     }
     
+    .site-nav a:hover::before{
+        height: 100%;
+    }
+
     .site-nav i{
         display: none;
     }
 
     .site-nav .contacto{
-        border-radius: 28px;
-        border: .15em solid #fff;
-        padding: .3em 1.5em;
-    }
-    
-    .site-nav .contacto:hover{
-        border-radius: 28px;
-        border: .15em solid #fff;
-        background-color: #fff;
-        color: #B06161;
+        margin-right: 0;
     }
 
     .site-nav a:hover,
     .site-nav a:focus{
         background: transparent;
     }
+}
 
-    .slide-right{
-        float: right;
-        width: 400px;
+@media (min-width: 1100px){
+
+    main{
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
     }
 
-    .slide-left{
+    .form-container{
         float: right;
-        width: 985px;
-        height: 100vh;
-        margin-top: -385px;
-        top: 0;
+        width: 50%;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 30px 80px 30px 50px;
     }
 
-    .slide-left img{
-        height: 100%;
+    .form-container h2{
+        font-size: 2em;
+    }
+
+
+    .form-container label{
+        font-size: 1.2em;
+    }
+
+    .form-container input:last-child{
+        padding: 0.8em 1.2em;
+    }
+
+    .ilustrations-container{
+        float: left;
+        width: 50%;
+        height: calc(100vh - 70px);
+        position: relative;
+    }
+
+    .ilustrations-container > .wave{
+        display: none;
+    }   
+
+    .ilustrations-container .wave1{
+        display: inline-block;
+        position: absolute;
+        width: 90%;
+        height: calc(100vh - 70px);
+        left: 0;
+    }
+
+}
+
+@media (min-width: 1200px){
+    
+    .site-nav{
+        font-size: 1.5em;
+    }
+    
+    .site-nav a{
+        margin-right: 2em;
+    }
+}
+
+@media (min-width: 1600px){
+    .form-container{
+        padding: 30px 150px 30px 110px;
     }
 }
